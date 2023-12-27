@@ -160,11 +160,11 @@ if (reserva.length > 0) {
 }
 
 // Búsqueda de productos por nombre
-let entrada2 = prompt("Escriba que producto desea buscar:").toLowerCase();
+let entrada2 = prompt("MENU DE BUSQUEDA POR NOMBRE DE PRODUCTO\n\nEscriba que producto desea buscar:").toLowerCase();
 const producto = productos.find((item) => item.nombre === entrada2)
 
 if (producto) {
-  alert(`
+  alert(`Resultado de su busqueda\n
     Id: ${producto.id}
     Nombre: ${producto.nombre}
     Precio: ${producto.precio}
@@ -174,12 +174,12 @@ if (producto) {
 }
 
 // Filtrado de productos por precio mínimo
-let precio = Number(prompt("Ingrese el precio mínimo dispuesto a pagar"));
+let precio = Number(prompt("MENU DE FILTRADO DE PRODUCTOS POR PRECIO\n\nIngrese el precio mínimo dispuesto a pagar"));
 let filtrados = productos.filter((item) => item.precio >= precio);
 
 if (filtrados && filtrados.length > 0) {
   filtrados.forEach((item) => {
-    alert(`
+    alert(`Resultado de su filtro\n
       Id: ${item.id}
       Nombre: ${item.nombre}
       Precio: ${item.precio}
